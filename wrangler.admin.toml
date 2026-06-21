@@ -1,0 +1,18 @@
+# 어드민 워커 설정 (관리자 경로만 담당)
+name = "admin-worker"
+main = "workers/admin-worker.js"
+compatibility_date = "2026-06-21"
+
+routes = [
+  { pattern = "bg.cloud-press.co.kr/admin/*", zone_name = "cloud-press.co.kr" }
+]
+
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "blogger-vps-db"
+database_id = "3297df43-c730-4188-86f9-d5424195a76c"
