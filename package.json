@@ -5,11 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler deploy -c wrangler.toml && wrangler deploy -c wrangler.admin.toml",
+    "deploy:seo": "wrangler deploy -c wrangler.toml",
+    "deploy:admin": "wrangler deploy -c wrangler.admin.toml",
     "db:init": "wrangler d1 execute blogger-vps-db --file=./schema.sql --remote",
     "db:migrate": "wrangler d1 migrations apply blogger-vps-db --remote"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.103.0"
   }
 }
