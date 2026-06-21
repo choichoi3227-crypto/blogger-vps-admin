@@ -1,0 +1,15 @@
+{
+  "name": "blogspot-vps-engine",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers-based SEO & Admin Engine for Blogspot",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute blogger-vps-db --file=./schema.sql --remote",
+    "db:migrate": "wrangler d1 migrations apply blogger-vps-db --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
