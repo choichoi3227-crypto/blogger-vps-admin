@@ -6,14 +6,14 @@ compatibility_date = "2026-06-21"
 name = "seo-worker"
 main = "workers/main-worker.js"
 # 이 워커는 블로그 전체 트래픽을 담당
-routes = [ { pattern = "your-domain.com/*", zone_name = "your-domain.com" } ]
+routes = [ { pattern = "bg.cloud-press.co.kr/*", zone_name = "cloud-press.co.kr" } ]
 
 # 2. 어드민 워커 설정
 [[services]]
 name = "admin-worker"
 main = "workers/admin-worker.js"
 # 이 워커는 관리자 경로만 담당
-routes = [ { pattern = "your-domain.com/admin/*", zone_name = "your-domain.com" } ]
+routes = [ { pattern = "bg.cloud-press.co.kr/admin/*", zone_name = "cloud-press.co.kr" } ]
 
 # 3. 공통 DB 바인딩 (두 워커가 이 DB를 같이 씀)
 [[d1_databases]]
