@@ -2,7 +2,7 @@
 /**
  * Admin Worker: 시스템 제어 및 라우트/캐시 관리
  */
-import adminHtml from './admin.html';
+import adminHtml from '../assets/admin.html';
 
 export default {
   async fetch(request, env, ctx) {
