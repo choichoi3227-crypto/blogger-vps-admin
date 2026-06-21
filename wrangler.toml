@@ -19,4 +19,4 @@ routes = [ { pattern = "bg.cloud-press.co.kr/admin/*", zone_name = "cloud-press.
 [[d1_databases]]
 binding = "DB"
 database_name = "blogger-vps-db"
-database_id = "YOUR_DATABASE_ID_HERE"
+database_id = "3297df43-c730-4188-86f9-d5424195a76c"
