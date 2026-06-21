@@ -1,5 +1,5 @@
 # SEO 워커 설정 (블로그 전체 트래픽 담당)
-name = "seo-worker"
+name = "blogger-vps-admin"
 main = "workers/main-worker.js"
 compatibility_date = "2026-06-21"
 
