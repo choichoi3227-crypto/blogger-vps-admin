@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블로그스팟 관리 패널</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+    <div id="app" class="p-8">
+        <h1 class="text-2xl font-bold mb-4">관리자 패널</h1>
+        <div class="grid grid-cols-2 gap-4">
+            <button onclick="purgeCache()" class="p-4 bg-red-600 text-white rounded">캐시 전체 삭제</button>
+            <button onclick="saveConfig()" class="p-4 bg-blue-600 text-white rounded">설정 저장</button>
+        </div>
+    </div>
+    <script>
+        async function purgeCache() {
+            // 관리자 워커 API 호출
+            const res = await fetch('/api/admin/cache/purge', { method: 'POST' });
+            alert('캐시 삭제 명령 전달됨');
+        }
+    </script>
+</body>
+</html>
